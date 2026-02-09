@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a0a;
+  --color-foreground: #fafafa;
+  --color-primary: #ff6b35;
+  --color-secondary: #141414;
+  --color-accent: #ff8555;
+  --color-muted: #a1a1a1;
+  --color-border: #262626;
+
+  --font-family-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+  --font-family-sans: 'Inter var', system-ui, sans-serif;
+}
+
+* {
+  border-color: #262626;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #fafafa;
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Brutalist borders */
+.brutalist-border {
+  border: 2px solid currentColor;
+}
+
+/* Terminal styling */
+.terminal {
+  background: #0a0a0a;
+  border: 2px solid #ff6b35;
+  box-shadow: 4px 4px 0px #ff6b35;
+}
+
+/* Scanline effect */
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+/* Components */
+.btn-brutalist {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff6b35;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid #ff6b35;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 4px 4px 0px #ff6b35;
+}
+
+.btn-brutalist:hover {
+  background-color: #ff8555;
+  border-color: #ff8555;
+  box-shadow: 2px 2px 0px #ff6b35;
+  transform: translate(2px, 2px);
+}
+
+.card-brutalist {
+  background-color: #141414;
+  border: 2px solid #262626;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.card-brutalist:hover {
+  border-color: #ff6b35;
+}
