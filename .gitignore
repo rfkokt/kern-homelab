@@ -5,8 +5,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build output
-dist
-build
+# dist - committed for Docker deployment
+# build
 
 # Environment
 .env
